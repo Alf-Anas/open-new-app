@@ -26,7 +26,7 @@
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/open-news-app.git
+git clone https://github.com/Alf-Anas/open-new-app.git
 cd open-news-app
 ```
 
