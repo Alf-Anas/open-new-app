@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# 📰 Open News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Open News App** is a responsive, fast, and modern news reader built with **React**, **TypeScript**, and **Vite**, fetching the latest headlines from **The New York Times**. Search and read articles easily with a clean UI powered by **Material UI (MUI)**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   🔍 Search articles by keyword
+-   📰 View latest news on homepage
+-   📱 Responsive design (mobile-first)
+-   📄 Detailed article view with external NYTimes link
+-   🧭 Routing with React Router
+-   ⚡ Fast development with Vite
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   [Vite](https://vitejs.dev/)
+-   [React](https://reactjs.org/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Material UI](https://mui.com/)
+-   [Day.js](https://day.js.org/)
+-   [Axios](https://axios-http.com/)
+-   [React Router](https://reactrouter.com/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Clone the repository**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/open-news-app.git
+cd open-news-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Install dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. **Set up environment variables**
+
+Rename `.env.example` to `.env` and add your NYTimes API key:
+
+```env
+VITE_BASE_URL=base_url
+VITE_API_KEY=your_nyt_api_key_here
+```
+
+You can get your key at [developer.nytimes.com](https://developer.nytimes.com/).
+
+4. **Run the app**
+
+```bash
+npm run dev
+```
+
+Open your browser and go to `http://localhost:5173`
